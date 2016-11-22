@@ -15,6 +15,10 @@ This will give the print the results of the run after
 2. someway to find a new shortest path if one of the edges in the initial shortest path is missing without re-running Dijkstra? - See notes below about "Replacement Paths".
 
 ## Other notes:
+### http://www.siam.org/meetings/alenex03/Abstracts/jhershberger.pdf
+* Section 4 - The Replacement Paths Problem - looks promising. 
+* "We want to compute the shortest path from x to y that does not include the edge (vi, vi+1), for each i ∈ {1, 2, . . . , m − 1}. We call this the best replacement path for (vi, vi+1); the reference to the source x and target y is implicit"
+
 ### http://alumni.cs.ucsb.edu/~bhosle/publications/eprp-pdcs04-final.pdf
 * The (Single-Edge) Replacement Paths problem is defined
 as follows: Given a weighted graph G(V, E), two nodes
@@ -28,3 +32,5 @@ path changes with the deletion of an edge lying on the path.
 ### http://ie.technion.ac.il/~yemek/Publications/near-linear-time.pdf
 * A Near-Linear Time Algorithm for Computing Replacement Paths
 in Planar Directed Graphs
+
+### http://cstheory.stackexchange.com/questions/6822/shortest-paths-disallowing-each-edge
