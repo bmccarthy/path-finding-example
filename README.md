@@ -11,5 +11,4 @@ This will give the print the results of the run after
 2.b If it is not part of the optimum path, return the saved optimum path distance
 
 ## TODO:
-1. Check if the edge being removed is a bridge in the graph, and if not, then the optimum path distance can be returned
-2. Instead of re-running Dijkstra each time, have a better way to calculate the increase in distance caused by the removal of a bridge edge.
+1. Check if the edge being removed is part of one of the shortest paths from the start to destination.  Currently, the code only checks a single shortest path.
