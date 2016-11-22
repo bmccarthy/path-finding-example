@@ -64,6 +64,13 @@ class ProblemHelper {
     let shortestPath = dijkstra.shortestPath(problem.s, problem.d);
 
     for (let i = 0; i < problem.queries.length; i++) {
+
+      // if there is no original shortest path, then removing any node won't affect the outcome and there is still no path
+      if (shortestPath.distance === Infinity) {
+        results.push(Infinity);
+        continue;
+      }
+
       let removeU = problem.queries[i].u;
       let removeV = problem.queries[i].v;
 
@@ -82,10 +89,8 @@ class ProblemHelper {
       // re-add edge to graph for this current iteration
       dijkstra.addEdge(removeU, removeV, removedEdgeDistance);
 
-      let actual = (result.distance === Infinity) ? "Infinity" : result.distance;
-
       results.push(result.distance);
-      // this.logAnswer(actual, null, i, false, problem.queries.length);
+      // this.logAnswer(result.distance, null, i, false, problem.queries.length);
     }
 
     return results;
